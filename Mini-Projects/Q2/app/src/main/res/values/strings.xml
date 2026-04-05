@@ -6,8 +6,8 @@
     <string name="no_file_loaded">No file loaded</string>
     <string name="status_idle">Status: Idle</string>
     <string name="open_audio_file">Open Audio File</string>
-    <string name="pause">⏸ Pause</string>
-    <string name="stop">⏹ Stop</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
     <string name="restart">⏮ Restart</string>
     <string name="play">▶ Play</string>
     <string name="status_loading">Status: Loading...</string>
