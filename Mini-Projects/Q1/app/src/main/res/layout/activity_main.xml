@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Root layout: vertical stack of all UI elements -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="?attr/colorSurface">
 
-    <!-- Top toolbar with Settings icon -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <!-- Scrollable content so it works on small screens too -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,9 +25,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp"
-            android:gravity="center_horizontal">
+            android:gravity="center">
 
-            <!-- App icon / header label -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,28 +34,28 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="?attr/colorPrimary"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginBottom="32dp" />
 
-            <!-- Amount input field -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Amount"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="?attr/colorPrimary"
+                app:hintTextColor="?attr/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:gravity="center" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- FROM currency label -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="From"
                 android:textSize="14sp"
@@ -66,15 +63,13 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="4dp" />
 
-            <!-- FROM currency spinner -->
             <Spinner
                 android:id="@+id/spinnerFrom"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
-                android:textSize="16sp" />
+                android:minWidth="150dp" />
 
-            <!-- Swap button between the two spinners -->
             <Button
                 android:id="@+id/btnSwap"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -84,55 +79,55 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="12dp" />
 
-            <!-- TO currency label -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="To"
                 android:textSize="14sp"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="4dp" />
 
-            <!-- TO currency spinner -->
             <Spinner
                 android:id="@+id/spinnerTo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
-                android:textSize="16sp" />
+                android:minWidth="150dp" />
 
-            <!-- Convert button -->
             <Button
                 android:id="@+id/btnConvert"
                 style="@style/Widget.MaterialComponents.Button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="200dp"
                 android:text="Convert"
                 android:textSize="16sp"
                 android:layout_marginTop="28dp" />
 
-            <!-- Result display card -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+                android:layout_marginTop="16dp"
+                android:minWidth="200dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:cardBackgroundColor="@android:color/transparent">
 
                 <TextView
                     android:id="@+id/textViewResult"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Result will appear here"
-                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:text="Result"
+                    android:textSize="16sp"
                     android:textAlignment="center"
                     android:gravity="center"
                     android:textColor="?attr/colorPrimary"
                     android:textStyle="bold" />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
