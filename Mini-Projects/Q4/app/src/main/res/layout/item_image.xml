@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Each cell in the image grid -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/imageViewThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo_5"
+        android:scaleType="centerCrop"
+        android:background="#FF222222" />
+
+</FrameLayout>

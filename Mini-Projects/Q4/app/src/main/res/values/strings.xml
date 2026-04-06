@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Q4 - Gallery</string>
+    <string name="choose_internal_storage_when_picking_a_folder">Choose \'Internal Storage\' when picking a folder</string>
+    <string name="open_photo_gallery">📁 Open Photo Gallery</string>
+    <string name="take_a_new_photo">📷 Take a New Photo</string>
+    <string name="todo">TODO</string>
+    <string name="no_images_found_in_this_folder">No images found in this folder</string>
+    <string name="todo_1">TODO</string>
+    <string name="todo_2">TODO</string>
+    <string name="todo_3">TODO</string>
+    <string name="todo_4">TODO</string>
+    <string name="todo_5">TODO</string>
+    <string name="show_info">Show Info</string>
+    <string name="delete_image">Delete Image</string>
+    <string name="share">Share</string>
+    <string name="full_image">Full Image</string>
+</resources>

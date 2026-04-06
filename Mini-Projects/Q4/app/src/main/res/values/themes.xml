@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Q4CameraGallery"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF1976D2</item>
+        <item name="colorPrimaryVariant">#FF0D47A1</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#FF03DAC5</item>
+        <item name="android:statusBarColor">#FF0D47A1</item>
+    </style>
+</resources>
